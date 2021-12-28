@@ -1,5 +1,5 @@
 
-
+function reloadon(){
     var x = document.getElementsByClassName("_6q-tv");
          x[0].innerHTML = "Hello World!";
          y=x[0].src
@@ -24,6 +24,8 @@ const node = document.createTextNode("Download now");
 para.appendChild(node);
 const element = document.getElementsByClassName("QGPIr")[0];
 element.appendChild(para);
+}
+setInterval(reloadon,3000);
 
 
    
