@@ -146,7 +146,9 @@
 
           
           }
-          
+          document.getElementsByClassName("    coreSpriteRightChevron  ")[0].addEventListener("click", function() {
+              console.log("I'm in onClick Function");
+          })
           loadNames();
           function run(){
               console.log("yes button is working")
