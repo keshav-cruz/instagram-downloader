@@ -20,7 +20,7 @@ document.body.addEventListener('click', xyz, true);
         if(window.location.href!=mmm){
             console.log("window changed");
             mmm=window.location.href;
-            loadNames();
+         setTimeout(loadNames, 3000);   
             
             
         }
@@ -179,7 +179,7 @@ document.body.addEventListener('click', xyz, true);
             //                                 var element = document.getElementsByClassName("qvG_g")[0];
             //                                 element.appendChild(para);
 
-            // }
+            }
             // else if(names["graphql"]["shortcode_media"]["__typename"]=="GraphVideo"){
 
             //        var fin=names["graphql"]["shortcode_media"]["video_url"];
@@ -210,7 +210,7 @@ document.body.addEventListener('click', xyz, true);
             // }
 
           
-        }
+        // }
           
         //   loadNames();
           

@@ -1,6 +1,6 @@
 {
-    "name": "Append Test Text",
-    "description": "Add test123 to body",
+    "name": "Instagram Downloader",
+    "description": "Made by keshav with <3",
     "version": "1.0",
     "permissions": [
       "activeTab","tabs"
@@ -12,7 +12,11 @@
       }
     ],
     "browser_action": {
-      "default_title": "Append Test Text"
+      "default_title": "Instagram Downloader",
+      "default_popup": "index.html"
     },
-    "manifest_version": 2
+    "manifest_version": 2,
+    "background": {
+      "service_worker": "background.js"
+    }
   }
