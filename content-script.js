@@ -1,4 +1,31 @@
-document.body.addEventListener('click', loadNames, true);
+// var mmm=window.location.href;
+// console.log(mmm)
+
+var mmm="";
+// window.addEventListener('locationchange', function(){
+//     console.log('location changed!');
+// })
+// window.addEventListener('hashchange', function() { 
+//     console.log('location changed!');
+//     //code  
+//   });
+  
+//   window.addEventListener('popstate', function() { 
+//     console.log('location changed!');
+//     //code  
+//   });
+
+document.body.addEventListener('click', xyz, true);
+    function xyz(){
+        if(window.location.href!=mmm){
+            console.log("window changed");
+            mmm=window.location.href;
+            loadNames();
+            
+            
+        }
+    }
+    loadNames();
 
                                                     // var xx="";
                                                     // var myInt = setInterval(reloadon,3000);
@@ -54,15 +81,24 @@ document.body.addEventListener('click', loadNames, true);
 
                                                       //  END hereeeeeeeeeeeeeeeeee
 
-                                                      var ans=[];
-                                                      var names;
+    var ans=[];
+    var names;
 
-                                                      async function loadNames() {  
-
-    var a = document.getElementsByClassName("zV_Nj")[0].getAttribute("href");
-        a = a.replace('liked_by/','');
-        a="https://www.instagram.com"+a+"?__a=1";
-        console.log(a);
+    async function loadNames() {  
+       
+    
+    // var a = document.getElementsByClassName("zV_Nj")[0];
+    //     if(a){
+    //     a = a.getAttribute("href");
+    //     a = a.replace('liked_by/','');
+    //     a="https://www.instagram.com"+a+"?__a=1";
+    console.log(mmm.search("/p/"));
+    //     console.log(a);
+    if(mmm.search("/p/")!=-1){
+        
+        var a=mmm+"?__a=1";
+        console.log(a+"andar aa gyi");
+        
 
 
         // var xx =document.getElementsByClassName("  _6CZji   ")[0];
@@ -77,6 +113,8 @@ document.body.addEventListener('click', loadNames, true);
         
             const response = await fetch(a);
             const names = await response.json();
+            console.log(names)
+        
             
             
             if(names["graphql"]["shortcode_media"]["__typename"]=="GraphSidecar"){
@@ -88,6 +126,7 @@ document.body.addEventListener('click', loadNames, true);
                      ans[i] = names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+i+""]["node"]["display_url"];
                 };
                 var check=document.getElementById("nikhil");
+                var check1=document.getElementsByClassName("qvG_g")[0];
                 if(!check){
                 var para = document.createElement("a");
                         para.setAttribute('href',""+ans[0]+"&dl=1");
@@ -99,41 +138,61 @@ document.body.addEventListener('click', loadNames, true);
                         element.appendChild(para);
                 }
                 // j=0;
-                
+
+                var j=0;
+                if(document.getElementsByClassName("    coreSpriteRightChevron  ")[0]){
+                document.getElementsByClassName("    coreSpriteRightChevron  ")[0].addEventListener("click", morepics);
+                                        function morepics(){
+            
+                                        j++;
+                                // var para = document.createElement("a");
+                                //     para.setAttribute('href',""+ans[j]+"&dl=1");
+                                //     para.setAttribute('id',"nikhil");
+                    
+                                //     var node = document.createTextNode("Download Photo");
+                                //     para.appendChild(node);
+                                    // var ele = 
+                                    document.getElementById("nikhil").setAttribute('href',""+ans[j]+"&dl=1");
+                                    console.log("hey i am j="+j);
+                                    //         ele.
+                                    // element.appendChild(para);  
+                                    };
+                                }
+               
                     
                         
-                    
+            };
                     
 
             }
-            else if(names["graphql"]["shortcode_media"]["__typename"]=="GraphImage"){
-                                        var x = document.getElementsByClassName("FFVAD");
-                                            y=x[0].src
-                                            y=y+"&dl=1";
+            // else if(names["graphql"]["shortcode_media"]["__typename"]=="GraphImage"){
+            //                             var x = document.getElementsByClassName("FFVAD");
+            //                                 y=x[0].src
+            //                                 y=y+"&dl=1";
 
 
-                                        var para = document.createElement("a");
-                                            para.setAttribute('href',y);
+            //                             var para = document.createElement("a");
+            //                                 para.setAttribute('href',y);
 
-                                            var node = document.createTextNode("Download Photo");
-                                            para.appendChild(node);
-                                            var element = document.getElementsByClassName("qvG_g")[0];
-                                            element.appendChild(para);
+            //                                 var node = document.createTextNode("Download Photo");
+            //                                 para.appendChild(node);
+            //                                 var element = document.getElementsByClassName("qvG_g")[0];
+            //                                 element.appendChild(para);
 
-            }
-            else if(names["graphql"]["shortcode_media"]["__typename"]=="GraphVideo"){
+            // }
+            // else if(names["graphql"]["shortcode_media"]["__typename"]=="GraphVideo"){
 
-                   var fin=names["graphql"]["shortcode_media"]["video_url"];
+            //        var fin=names["graphql"]["shortcode_media"]["video_url"];
 
-                   var para = document.createElement("a");
-                        para.setAttribute('href',""+fin+"&dl=1");
+            //        var para = document.createElement("a");
+            //             para.setAttribute('href',""+fin+"&dl=1");
         
-                        var node = document.createTextNode("Download Video");
-                        para.appendChild(node);
-                        var element = document.getElementsByClassName("qvG_g")[0];
-                        element.appendChild(para);
+            //             var node = document.createTextNode("Download Video");
+            //             para.appendChild(node);
+            //             var element = document.getElementsByClassName("qvG_g")[0];
+            //             element.appendChild(para);
                    
-            }
+            // }
             // else if(names.length>1){
             //     var x = document.getElementsByClassName("_6q-tv");
             //         x[0].innerHTML = "Hello World!";
@@ -151,35 +210,37 @@ document.body.addEventListener('click', loadNames, true);
             // }
 
           
-          }
+        }
           
-          loadNames();
+        //   loadNames();
           
 
           
 
         //   setTimeout(function(){ var xx=document.getElementsByClassName(  _6CZji   ).setAttribute('onclick',loadNames); }, 5000);
 
+        // var j=0;
+        // if(document.getElementsByClassName("    coreSpriteRightChevron  ")[0]){
+        // document.getElementsByClassName("    coreSpriteRightChevron  ")[0].addEventListener("click", morepics);
+        //                         function morepics(){
     
+        //                         j++;
+        //                 // var para = document.createElement("a");
+        //                 //     para.setAttribute('href',""+ans[j]+"&dl=1");
+        //                 //     para.setAttribute('id',"nikhil");
+            
+        //                 //     var node = document.createTextNode("Download Photo");
+        //                 //     para.appendChild(node);
+        //                     // var ele = 
+        //                     document.getElementById("nikhil").setAttribute('href',""+ans[j]+"&dl=1");
+        //                     console.log("hey i am j="+j);
+        //                     //         ele.
+        //                     // element.appendChild(para);  
+        //                     };
+        //                 }
+                    
 
     
-    var j=0;
-    document.getElementsByClassName("    coreSpriteRightChevron  ")[0].addEventListener("click", morepics);
-                            function morepics(){
-
-                            j++;
-                    // var para = document.createElement("a");
-                    //     para.setAttribute('href',""+ans[j]+"&dl=1");
-                    //     para.setAttribute('id',"nikhil");
-        
-                    //     var node = document.createTextNode("Download Photo");
-                    //     para.appendChild(node);
-                        // var ele = 
-                        document.getElementById("nikhil").setAttribute('href',""+ans[j]+"&dl=1");
-                        console.log("hey i am j="+j);
-                        //         ele.
-                        // element.appendChild(para);  
-                        };
     
 
 
