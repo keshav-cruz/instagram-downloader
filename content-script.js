@@ -1,3 +1,4 @@
+document.body.addEventListener('click', loadNames, true);
 
                                                     // var xx="";
                                                     // var myInt = setInterval(reloadon,3000);
@@ -53,7 +54,8 @@
 
                                                       //  END hereeeeeeeeeeeeeeeeee
 
-
+                                                      var ans=[];
+                                                      var names;
 
                                                       async function loadNames() {  
 
@@ -76,25 +78,29 @@
             const response = await fetch(a);
             const names = await response.json();
             
+            
             if(names["graphql"]["shortcode_media"]["__typename"]=="GraphSidecar"){
-
+                
                 var numbers=names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"];
                 for (var i=0; i < numbers.length; i++){
             
             
-                     ans = names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+i+""]["node"]["display_url"];
-                    
-                     
-                    console.log(ans)
+                     ans[i] = names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+i+""]["node"]["display_url"];
+                };
+                var check=document.getElementById("nikhil");
+                if(!check){
+                var para = document.createElement("a");
+                        para.setAttribute('href',""+ans[0]+"&dl=1");
+                        para.setAttribute('id',"nikhil");
         
-                    var para = document.createElement("a");
-                        para.setAttribute('href',""+ans+"&dl=1");
-        
-                        var node = document.createTextNode("Download Photo"+(i+1)+"");
+                        var node = document.createTextNode("Download Photo");
                         para.appendChild(node);
                         var element = document.getElementsByClassName("qvG_g")[0];
                         element.appendChild(para);
-                    }
+                }
+                // j=0;
+                
+                    
                         
                     
                     
@@ -148,9 +154,7 @@
           }
           
           loadNames();
-          function run(){
-              console.log("yes button is working")
-          }
+          
 
           
 
@@ -158,9 +162,24 @@
 
     
 
-    // validation for instagram usernames
-    // var regex = new RegExp(/^(?!.F*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/);
     
+    var j=0;
+    document.getElementsByClassName("    coreSpriteRightChevron  ")[0].addEventListener("click", morepics);
+                            function morepics(){
+
+                            j++;
+                    // var para = document.createElement("a");
+                    //     para.setAttribute('href',""+ans[j]+"&dl=1");
+                    //     para.setAttribute('id',"nikhil");
+        
+                    //     var node = document.createTextNode("Download Photo");
+                    //     para.appendChild(node);
+                        // var ele = 
+                        document.getElementById("nikhil").setAttribute('href',""+ans[j]+"&dl=1");
+                        console.log("hey i am j="+j);
+                        //         ele.
+                        // element.appendChild(para);  
+                        };
     
 
 
