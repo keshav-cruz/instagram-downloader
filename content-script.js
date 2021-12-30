@@ -150,6 +150,7 @@ document.body.addEventListener('click', xyz, true);
                 var para = document.createElement("button");
                         para.setAttribute('onclick','window.location.href="'+ans[0]+'&dl=1";');
                         para.setAttribute('id',"nikhil");
+                        para.setAttribute('class','button-54');
         
                         var node = document.createTextNode("Download Photo");              
                         para.appendChild(node);
@@ -163,6 +164,7 @@ document.body.addEventListener('click', xyz, true);
                                       var para = document.createElement("button");
                                             para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
                                             para.setAttribute('id',"keshav");
+                                            para.setAttribute('class','button-54');
                                        var node = document.createTextNode("Download Video");
                                           para.appendChild(node);
                                       var element = document.getElementsByClassName("qvG_g")[0];
@@ -173,13 +175,30 @@ document.body.addEventListener('click', xyz, true);
                 // j=0;
 
                 var j=0;
+                var yy=0;
                 if(document.getElementsByClassName("    coreSpriteRightChevron  ")[0]){
-                document.getElementsByClassName("    coreSpriteRightChevron  ")[0].addEventListener("click", morepics);
-                                        function morepics(){
+                document.getElementsByClassName("    coreSpriteRightChevron  ")[0].addEventListener("click", fwd);
 
+                function fwd(){
+                    j++; 
+                    yy++;
+                    if(yy==2){
+                        okji();
+                    } 
+                    apnd();
+                    console.log("i m fwd"+j);
+                }
+                function okji(){
+                    
+                    document.getElementsByClassName("   coreSpriteLeftChevron   ")[0].addEventListener("click", function oo(){j--; apnd(); console.log("i m back"+j);});}
+                
+
+                                        // function morepics(){
+                                                
             
-                                        j++;
-                                      
+                                        // j++;
+                                        
+                                    //   console.log("i am in forward"+j);
                                 // var para = document.createElement("a");
                                 //     para.setAttribute('href',""+ans[j]+"&dl=1");
                                 //     para.setAttribute('id',"nikhil");
@@ -196,6 +215,7 @@ document.body.addEventListener('click', xyz, true);
                                 // para.appendChild(node);
                                 // var element = document.getElementsByClassName("qvG_g")[0]; 
                                 // var element = document.getElementById("okok"+j).getElementsByClassName("_9AhH0")[0];
+                                function apnd(){
                                 
                                 document.getElementById("nikhil").setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
 
@@ -209,6 +229,7 @@ document.body.addEventListener('click', xyz, true);
                                      var para = document.createElement("button");
                                            para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
                                            para.setAttribute('id',"keshav");
+                                           para.setAttribute('class','button-54');
                                       var node = document.createTextNode("Download Video");
                                          para.appendChild(node);
                                      var element = document.getElementsByClassName("qvG_g")[0];
@@ -223,14 +244,24 @@ document.body.addEventListener('click', xyz, true);
                                     }
 
                                 }
+
+                            }
                                 // console.log("hey i am j="+j);
-                                // element.appendChild(para); 
-                                    };
+                              
+                                
+                                    // };
+                                    
+                                    
+                                    
+                                    // element.appendChild(para);
                                 }
+
+                                    
+            }
                
                     
                         
-            }
+            
             else if(document.getElementsByClassName("PyenC")[0]){
                 // console.log("ok");
                 var fin=names["graphql"]["shortcode_media"]["video_url"];
@@ -238,6 +269,7 @@ document.body.addEventListener('click', xyz, true);
 
                    var para = document.createElement("button");
                         para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
+                        para.setAttribute('class','button-54');
         
                         var node = document.createTextNode("Download Video");
                         para.appendChild(node);
@@ -252,6 +284,7 @@ document.body.addEventListener('click', xyz, true);
 
                    var para = document.createElement("button");
                         para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
+                        para.setAttribute('class','button-54');
 
                         var node = document.createTextNode("Download Photo");
                         para.appendChild(node);
@@ -340,7 +373,44 @@ document.body.addEventListener('click', xyz, true);
                     
 
     
-    
+        function strt(){
+            if(document.getElementsByClassName("   coreSpriteLeftChevron   ")[0]){
+                document.getElementsByClassName("   coreSpriteLeftChevron   ")[0].addEventListener("click", prevo);
+                function prevo(){
+                            
+
+                    j--;
+                    console.log("here j is "+j)
+                    document.getElementById("nikhil").setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
+
+    if(names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+j+""]["node"]["video_url"]){  // document.getElementsByClassName("PyenC")[0]
+        
+       var fin = names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+j+""]["node"]["video_url"];
+                 console.log(fin);
+                 if(document.getElementById("keshav")){
+                    document.getElementById("keshav").setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
+                }else{
+                 var para = document.createElement("button");
+                       para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
+                       para.setAttribute('id',"keshav");
+                  var node = document.createTextNode("Download Video");
+                     para.appendChild(node);
+                 var element = document.getElementsByClassName("qvG_g")[0];
+                     element.appendChild(para);
+                }
+
+            }
+            else{
+                if(document.getElementById("keshav")){
+                    console.log("ayaaa tha bhai")
+                    document.getElementById("keshav").remove();
+                }
+
+            }
+        }
+                
+                
+}}
 
 
 
