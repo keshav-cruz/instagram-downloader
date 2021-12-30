@@ -2,18 +2,7 @@
 // console.log(mmm)
 
 var mmm="";
-// window.addEventListener('locationchange', function(){
-//     console.log('location changed!');
-// })
-// window.addEventListener('hashchange', function() { 
-//     console.log('location changed!');
-//     //code  
-//   });
-  
-//   window.addEventListener('popstate', function() { 
-//     console.log('location changed!');
-//     //code  
-//   });
+
 
 document.body.addEventListener('click', xyz, true);
     function xyz(){
@@ -296,6 +285,31 @@ document.body.addEventListener('click', xyz, true);
                     
 
             }
+            else if(document.getElementsByClassName("QGPIr")[0] || document.getElementsByClassName("be6sR")[0]){
+                if(!document.getElementById("notnow")){
+                if(document.getElementsByClassName("be6sR")[0]){
+                    var x = document.getElementsByClassName("be6sR");
+                    x[0].innerHTML = "Hello World!";
+                    y=x[0].src
+                }
+                else{
+                var x = document.getElementsByClassName("_6q-tv");
+                    x[0].innerHTML = "Hello World!";
+                    y=x[0].src
+                }
+                    // y=y+"&dl=1";
+                var para = document.createElement("button");
+                para.setAttribute('onclick','window.location.href="'+y+'&dl=1";');
+                para.setAttribute('class','button-54');
+                para.setAttribute('id','notnow');
+
+                var node = document.createTextNode("Download DP");
+                para.appendChild(node);
+                var element = document.getElementsByClassName("QGPIr")[0];
+                element.appendChild(para);
+            }
+
+            }
            
             // else if(names["graphql"]["shortcode_media"]["__typename"]=="GraphImage"){
             //                             var x = document.getElementsByClassName("FFVAD");
@@ -325,7 +339,7 @@ document.body.addEventListener('click', xyz, true);
             //             element.appendChild(para);
                    
             // }
-            // else if(names.length>1){
+            // else if(document.getElementsByClassName("QGPIr")[0]){
             //     var x = document.getElementsByClassName("_6q-tv");
             //         x[0].innerHTML = "Hello World!";
             //         y=x[0].src
