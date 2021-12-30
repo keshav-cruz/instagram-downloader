@@ -18,7 +18,7 @@ var mmm="";
 document.body.addEventListener('click', xyz, true);
     function xyz(){
         if(window.location.href!=mmm){
-            console.log("window changed");
+            // console.log("window changed");
             mmm=window.location.href;
         //  setTimeout(loadNames, 3000); 
         loadNames();  
@@ -26,7 +26,10 @@ document.body.addEventListener('click', xyz, true);
             
         }
     }
+    
     loadNames();
+    
+   
 
                                                     // var xx="";
                                                     // var myInt = setInterval(reloadon,3000);
@@ -93,7 +96,7 @@ document.body.addEventListener('click', xyz, true);
     //     a = a.getAttribute("href");
     //     a = a.replace('liked_by/','');
     //     a="https://www.instagram.com"+a+"?__a=1";
-    console.log(mmm.search("/p/"));
+    // console.log(mmm.search("/p/"));
     //     console.log(a);
     if(mmm.search("/p/")!=-1){
         
@@ -153,6 +156,19 @@ document.body.addEventListener('click', xyz, true);
                         var element = document.getElementsByClassName("qvG_g")[0]; 
                        
                         element.appendChild(para);
+
+                        if(names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"]["0"]["node"]["video_url"]){  // document.getElementsByClassName("PyenC")[0]
+                            var fin = names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"]["0"]["node"]["video_url"];
+                                      console.log(fin);
+                                      var para = document.createElement("button");
+                                            para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
+                                            para.setAttribute('id',"keshav");
+                                       var node = document.createTextNode("Download Video");
+                                          para.appendChild(node);
+                                      var element = document.getElementsByClassName("qvG_g")[0];
+                                          element.appendChild(para);
+                        }
+
                 }
                 // j=0;
 
@@ -180,8 +196,34 @@ document.body.addEventListener('click', xyz, true);
                                 // para.appendChild(node);
                                 // var element = document.getElementsByClassName("qvG_g")[0]; 
                                 // var element = document.getElementById("okok"+j).getElementsByClassName("_9AhH0")[0];
+                                
                                 document.getElementById("nikhil").setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
-                                console.log("hey i am j="+j);
+
+                        if(names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+j+""]["node"]["video_url"]){  // document.getElementsByClassName("PyenC")[0]
+                            
+                           var fin = names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+j+""]["node"]["video_url"];
+                                     console.log(fin);
+                                     if(document.getElementById("keshav")){
+                                        document.getElementById("keshav").setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
+                                    }else{
+                                     var para = document.createElement("button");
+                                           para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
+                                           para.setAttribute('id',"keshav");
+                                      var node = document.createTextNode("Download Video");
+                                         para.appendChild(node);
+                                     var element = document.getElementsByClassName("qvG_g")[0];
+                                         element.appendChild(para);
+                                    }
+
+                                }
+                                else{
+                                    if(document.getElementById("keshav")){
+                                        console.log("ayaaa tha bhai")
+                                        document.getElementById("keshav").remove();
+                                    }
+
+                                }
+                                // console.log("hey i am j="+j);
                                 // element.appendChild(para); 
                                     };
                                 }
@@ -190,7 +232,7 @@ document.body.addEventListener('click', xyz, true);
                         
             }
             else if(document.getElementsByClassName("PyenC")[0]){
-                console.log("ok");
+                // console.log("ok");
                 var fin=names["graphql"]["shortcode_media"]["video_url"];
                 console.log(fin);
 
@@ -201,6 +243,21 @@ document.body.addEventListener('click', xyz, true);
                         para.appendChild(node);
                         var element = document.getElementsByClassName("qvG_g")[0];
                         element.appendChild(para);
+
+            }   //
+            else if(document.getElementsByClassName("eLAPa kPFhm")[0] || document.getElementsByClassName("eLAPa vF75o")[0] ){
+                // console.log("ok");
+                var fin=names["graphql"]["shortcode_media"]["display_url"];
+                console.log(fin);
+
+                   var para = document.createElement("button");
+                        para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
+
+                        var node = document.createTextNode("Download Photo");
+                        para.appendChild(node);
+                        var element = document.getElementsByClassName("qvG_g")[0];
+                        element.appendChild(para);
+                                        
 
             }
                     
