@@ -20,7 +20,8 @@ document.body.addEventListener('click', xyz, true);
         if(window.location.href!=mmm){
             console.log("window changed");
             mmm=window.location.href;
-         setTimeout(loadNames, 3000);   
+        //  setTimeout(loadNames, 3000); 
+        loadNames();  
             
             
         }
@@ -126,15 +127,15 @@ document.body.addEventListener('click', xyz, true);
                      ans[i] = names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+i+""]["node"]["display_url"];
                 };
                 var check=document.getElementById("nikhil");
-                var check1=document.getElementsByClassName("qvG_g")[0];
+                var check1=document.getElementsByClassName("_9AhH0")[0];
                 if(!check){
-                var para = document.createElement("a");
-                        para.setAttribute('href',""+ans[0]+"&dl=1");
-                        para.setAttribute('id',"nikhil");
+                var para = document.createElement("button");
+                        para.setAttribute('onclick','window.location.href="'+ans[0]+'&dl=1";');
+                        // para.setAttribute('id',"nikhil");
         
                         var node = document.createTextNode("Download Photo");
                         para.appendChild(node);
-                        var element = document.getElementsByClassName("qvG_g")[0];
+                        var element = document.getElementsByClassName("_9AhH0")[0];  
                         element.appendChild(para);
                 }
                 // j=0;
@@ -152,10 +153,16 @@ document.body.addEventListener('click', xyz, true);
                                 //     var node = document.createTextNode("Download Photo");
                                 //     para.appendChild(node);
                                     // var ele = 
-                                    document.getElementById("nikhil").setAttribute('href',""+ans[j]+"&dl=1");
-                                    console.log("hey i am j="+j);
-                                    //         ele.
-                                    // element.appendChild(para);  
+        // document.getElementsByClassName("_9AhH0").setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
+        // console.log("hey i am j="+j);
+                                var para = document.createElement("button");
+                                para.setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
+                                // para.setAttribute('id',"nikhil");
+
+                                var node = document.createTextNode("Download Photo");
+                                para.appendChild(node);
+                                var element = document.getElementsByClassName("_9AhH0")[j];  
+                                element.appendChild(para); 
                                     };
                                 }
                
@@ -165,6 +172,7 @@ document.body.addEventListener('click', xyz, true);
                     
 
             }
+           
             // else if(names["graphql"]["shortcode_media"]["__typename"]=="GraphImage"){
             //                             var x = document.getElementsByClassName("FFVAD");
             //                                 y=x[0].src
