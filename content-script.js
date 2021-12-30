@@ -123,19 +123,35 @@ document.body.addEventListener('click', xyz, true);
                 var numbers=names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"];
                 for (var i=0; i < numbers.length; i++){
             
-            
+                    
                      ans[i] = names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+i+""]["node"]["display_url"];
-                };
+                     
+                     
+                   
+                };  
+
                 var check=document.getElementById("nikhil");
                 var check1=document.getElementsByClassName("_9AhH0")[0];
                 if(!check){
+                    // var para = document.createElement("a");
+                    //                 para.setAttribute('href',""+ans[j]+"&dl=1");
+                    //                 para.setAttribute('id',"nikhil");
+                    
+                    //                 var node = document.createTextNode("Download Photo");
+                    //                 para.appendChild(node);
+                    //                 var element = document.getElementsByClassName("qvG_g")[0]; 
+                       
+                    //     element.appendChild(para);
+
+
                 var para = document.createElement("button");
                         para.setAttribute('onclick','window.location.href="'+ans[0]+'&dl=1";');
-                        // para.setAttribute('id',"nikhil");
+                        para.setAttribute('id',"nikhil");
         
-                        var node = document.createTextNode("Download Photo");
+                        var node = document.createTextNode("Download Photo");              
                         para.appendChild(node);
-                        var element = document.getElementsByClassName("_9AhH0")[0];  
+                        var element = document.getElementsByClassName("qvG_g")[0]; 
+                       
                         element.appendChild(para);
                 }
                 // j=0;
@@ -144,31 +160,49 @@ document.body.addEventListener('click', xyz, true);
                 if(document.getElementsByClassName("    coreSpriteRightChevron  ")[0]){
                 document.getElementsByClassName("    coreSpriteRightChevron  ")[0].addEventListener("click", morepics);
                                         function morepics(){
+
             
                                         j++;
+                                      
                                 // var para = document.createElement("a");
                                 //     para.setAttribute('href',""+ans[j]+"&dl=1");
                                 //     para.setAttribute('id',"nikhil");
                     
                                 //     var node = document.createTextNode("Download Photo");
                                 //     para.appendChild(node);
-                                    // var ele = 
-        // document.getElementsByClassName("_9AhH0").setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
+                                
         // console.log("hey i am j="+j);
-                                var para = document.createElement("button");
-                                para.setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
+                                // var para = document.createElement("button");
+                                // para.setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
                                 // para.setAttribute('id',"nikhil");
 
-                                var node = document.createTextNode("Download Photo");
-                                para.appendChild(node);
-                                var element = document.getElementsByClassName("_9AhH0")[j];  
-                                element.appendChild(para); 
+                                // var node = document.createTextNode("Download Photo");
+                                // para.appendChild(node);
+                                // var element = document.getElementsByClassName("qvG_g")[0]; 
+                                // var element = document.getElementById("okok"+j).getElementsByClassName("_9AhH0")[0];
+                                document.getElementById("nikhil").setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
+                                console.log("hey i am j="+j);
+                                // element.appendChild(para); 
                                     };
                                 }
                
                     
                         
-            };
+            }
+            else if(document.getElementsByClassName("PyenC")[0]){
+                console.log("ok");
+                var fin=names["graphql"]["shortcode_media"]["video_url"];
+                console.log(fin);
+
+                   var para = document.createElement("button");
+                        para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
+        
+                        var node = document.createTextNode("Download Video");
+                        para.appendChild(node);
+                        var element = document.getElementsByClassName("qvG_g")[0];
+                        element.appendChild(para);
+
+            }
                     
 
             }
