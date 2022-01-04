@@ -147,9 +147,10 @@ document.body.addEventListener('click',function om(){console.log("button clicked
                         para.setAttribute('onclick','window.location.href="'+ans[0]+'&dl=1";');
                         para.setAttribute('id',"nikhil");
                         para.setAttribute('class','button-54');
+                        para.innerHTML='<i class="gg-software-download"></i>';
         
-                        var node = document.createTextNode("Download Photo");              
-                        para.appendChild(node);
+                        // var node = document.createTextNode("Download Photo");              
+                        // para.appendChild(node);
                         var element = document.getElementsByClassName("qvG_g")[0]; 
                        
                         element.appendChild(para);
@@ -161,8 +162,9 @@ document.body.addEventListener('click',function om(){console.log("button clicked
                                             para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
                                             para.setAttribute('id',"keshav");
                                             para.setAttribute('class','button-54');
-                                       var node = document.createTextNode("Download Video");
-                                          para.appendChild(node);
+                                            para.innerHTML='<i class="gg-software-download"></i>';
+                                    //    var node = document.createTextNode("Download Video");
+                                    //       para.appendChild(node);
                                       var element = document.getElementsByClassName("qvG_g")[0];
                                           element.appendChild(para);
                         }
@@ -226,8 +228,9 @@ document.body.addEventListener('click',function om(){console.log("button clicked
                                            para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
                                            para.setAttribute('id',"keshav");
                                            para.setAttribute('class','button-54');
-                                      var node = document.createTextNode("Download Video");
-                                         para.appendChild(node);
+                                           para.innerHTML='<i class="gg-software-download"></i>';
+                                    //   var node = document.createTextNode("Download Video");
+                                    //      para.appendChild(node);
                                      var element = document.getElementsByClassName("qvG_g")[0];
                                          element.appendChild(para);
                                     }
@@ -258,17 +261,21 @@ document.body.addEventListener('click',function om(){console.log("button clicked
                     
                         
             
-            else if(document.getElementsByClassName("PyenC")[0]){
+            else if(document.getElementsByClassName("PyenC")[0]  || document.getElementsByClassName("GRtmf wymO0  ")[0]){
                 // console.log("ok");
+                console.log("im in video")
                 var fin=names["graphql"]["shortcode_media"]["video_url"];
                 console.log(fin);
 
                    var para = document.createElement("button");
                         para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
                         para.setAttribute('class','button-54');
+                        // svv=document.createElement("i");
+                        // svv.setAttribute('class','');
+                        para.innerHTML='<i class="gg-software-download"></i>';
         
-                        var node = document.createTextNode("Download Video");
-                        para.appendChild(node);
+                        // var node = document.createTextNode(svv);
+                        // para.appendChild(node);
                         var element = document.getElementsByClassName("qvG_g")[0];
                         element.appendChild(para);
 
@@ -281,9 +288,10 @@ document.body.addEventListener('click',function om(){console.log("button clicked
                    var para = document.createElement("button");
                         para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
                         para.setAttribute('class','button-54');
+                        para.innerHTML='<i class="gg-software-download"></i>';
 
-                        var node = document.createTextNode("Download Photo");
-                        para.appendChild(node);
+                        // var node = document.createTextNode("Download Photo");
+                        // para.appendChild(node);
                         var element = document.getElementsByClassName("qvG_g")[0];
                         element.appendChild(para);
                                         
@@ -309,9 +317,10 @@ document.body.addEventListener('click',function om(){console.log("button clicked
                 para.setAttribute('onclick','window.location.href="'+y+'&dl=1";');
                 para.setAttribute('class','button-54');
                 para.setAttribute('id','notnow');
+                para.innerHTML='<i class="gg-software-download"></i>';
 
-                var node = document.createTextNode("Download DP");
-                para.appendChild(node);
+                // var node = document.createTextNode("Download DP");
+                // para.appendChild(node);
                 var element = document.getElementsByClassName("QGPIr")[0];
                 element.appendChild(para);
             }
