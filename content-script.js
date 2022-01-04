@@ -2,21 +2,28 @@
 // console.log(mmm)
 
 var mmm="";
+document.body.addEventListener('load', function mmmm(){xyz();}, true);
 
 
-document.body.addEventListener('click', xyz, true);
+document.body.addEventListener('click',function om(){console.log("button clicked in event"); xyz()}, true);
+
+
     function xyz(){
+        
+        setTimeout(function hmm(){
         if(window.location.href!=mmm){
             // console.log("window changed");
             mmm=window.location.href;
+            console.log("button clicked andr")
         //  setTimeout(loadNames, 3000); 
         loadNames();  
             
             
-        }
+        }}
+        ,1000)
     }
     
-    loadNames();
+    // loadNames();
     
    
 
@@ -425,6 +432,8 @@ document.body.addEventListener('click', xyz, true);
                 
                 
 }}
+
+
 
 
 
