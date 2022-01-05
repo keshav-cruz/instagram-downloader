@@ -326,6 +326,55 @@ document.body.addEventListener('click',function om(){console.log("button clicked
             }
 
             }
+            else if(mmm.search("stories")!=-1){
+                if(document.getElementsByTagName("source")[0]){
+                                            if(!document.getElementById('stal')){
+                                        var xm = document.getElementsByTagName("source")[0].getAttribute("src");
+                                                // document.getElementsByClassName("")[0];
+
+                                                var para = document.createElement("a");
+                                        // para.setAttribute('onclick','window.location.href="'+xm+'&dl=1";');
+                                        para.setAttribute('href',xm+'&dl=1');
+                                        // para.setAttribute('class','button-54');
+                                        para.setAttribute('target','_blank');
+                                        para.setAttribute('id','stal');
+                                        para.innerHTML='<button class="button-54"><i class="gg-software-download"></i></button>';
+
+                                        // var node = document.createTextNode("Download DP");
+                                        // para.appendChild(node);
+                                        var element = document.getElementsByClassName("_8p8kF")[0];
+                                        element.appendChild(para);
+                                            }
+                                        else{
+                                            var xm = document.getElementsByTagName("source")[0].getAttribute("src");
+                                            document.getElementById('stal').setAttribute('href',xm+'&dl=1');
+                                        }
+            }
+            else if(document.getElementsByClassName('y-yJ5 i1HvM ')[0]){
+                if(!document.getElementById('stal')){
+                    var xm = document.getElementsByClassName('y-yJ5 i1HvM ')[0].getAttribute('src');
+                    var para = document.createElement("a");
+                        para.setAttribute('href',xm+'&dl=1');
+                        // para.setAttribute('class','button-54');
+                        // para.setAttribute('target','_blank');
+                        para.setAttribute('id','stal');
+                        para.innerHTML='<button class="button-54"><i class="gg-software-download"></i></button>';
+
+                        // var node = document.createTextNode("Download DP");
+                        // para.appendChild(node);
+                        var element = document.getElementsByClassName("_8p8kF")[0];
+                        element.appendChild(para);
+                            }
+                        else{
+                            var xm = document.getElementsByTagName("source")[0].getAttribute("src");
+                            document.getElementById('stal').setAttribute('href',xm+'&dl=1');
+                        }
+                    }
+
+            }
+            
+        
+
            
             // else if(names["graphql"]["shortcode_media"]["__typename"]=="GraphImage"){
             //                             var x = document.getElementsByClassName("FFVAD");
