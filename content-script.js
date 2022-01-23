@@ -5,18 +5,20 @@ var mmm="";
 document.body.addEventListener('load', function mmmm(){xyz();}, true);
 
 
-document.body.addEventListener('click',function om(){console.log("button clicked in event"); xyz()}, true);
+document.body.addEventListener('click',xyz(), true);
 
 
     function xyz(){
         
         setTimeout(function hmm(){
+            console.log("i am in set time out");
         if(window.location.href!=mmm){
             // console.log("window changed");
             mmm=window.location.href;
             console.log("button clicked andr")
         //  setTimeout(loadNames, 3000); 
-        loadNames();  
+        loadNames();
+        console.log("iam in set 2");  
             
             
         }}
@@ -117,13 +119,13 @@ document.body.addEventListener('click',function om(){console.log("button clicked
         
             
             
-            if(names["graphql"]["shortcode_media"]["__typename"]=="GraphSidecar"){
+            if(names["items"]["0"]["media_type"]==8){
                 
-                var numbers=names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"];
+                var numbers=names["items"]["0"]["carousel_media"];
                 for (var i=0; i < numbers.length; i++){
             
                     
-                     ans[i] = names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+i+""]["node"]["display_url"];
+                     ans[i] = names["items"]["0"]["carousel_media"][""+i+""]["image_versions2"]["candidates"]["0"]["url"];
                      
                      
                    
@@ -155,8 +157,8 @@ document.body.addEventListener('click',function om(){console.log("button clicked
                        
                         element.appendChild(para);
 
-                        if(names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"]["0"]["node"]["video_url"]){  // document.getElementsByClassName("PyenC")[0]
-                            var fin = names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"]["0"]["node"]["video_url"];
+                        if(names["items"]["0"]["carousel_media"]["0"]["media_type"]==2){  // document.getElementsByClassName("PyenC")[0]
+                            var fin = names["items"]["0"]["carousel_media"]["0"]["video_versions"]["0"]["url"];
                                       console.log(fin);
                                       var para = document.createElement("button");
                                             para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
@@ -217,9 +219,9 @@ document.body.addEventListener('click',function om(){console.log("button clicked
                                 
                                 document.getElementById("nikhil").setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
 
-                        if(names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+j+""]["node"]["video_url"]){  // document.getElementsByClassName("PyenC")[0]
+                        if(names["items"]["0"]["carousel_media"][""+j+""]["media_type"]==2){  // document.getElementsByClassName("PyenC")[0]
                             
-                           var fin = names["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"][""+j+""]["node"]["video_url"];
+                           var fin = names["items"]["0"]["carousel_media"][""+j+""]["video_versions"]["0"]["url"];
                                      console.log(fin);
                                      if(document.getElementById("keshav")){
                                         document.getElementById("keshav").setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
@@ -264,7 +266,7 @@ document.body.addEventListener('click',function om(){console.log("button clicked
             else if(document.getElementsByClassName("PyenC")[0]  || document.getElementsByClassName("GRtmf wymO0  ")[0]){
                 // console.log("ok");
                 console.log("im in video")
-                var fin=names["graphql"]["shortcode_media"]["video_url"];
+                var fin=names["items"]["0"]["video_versions"]["0"]["url"];
                 console.log(fin);
 
                    var para = document.createElement("button");
@@ -282,7 +284,7 @@ document.body.addEventListener('click',function om(){console.log("button clicked
             }   //
             else if(document.getElementsByClassName("eLAPa kPFhm")[0] || document.getElementsByClassName("eLAPa vF75o")[0] ){
                 // console.log("ok");
-                var fin=names["graphql"]["shortcode_media"]["display_url"];
+                var fin=names["items"]["0"]["image_versions2"]["candidates"]["0"]["url"];
                 console.log(fin);
 
                    var para = document.createElement("button");
@@ -301,6 +303,18 @@ document.body.addEventListener('click',function om(){console.log("button clicked
 
             }
             else if(document.getElementsByClassName("QGPIr")[0] || document.getElementsByClassName("be6sR")[0]){
+
+
+                // function sleep(milliseconds) {
+                //     const date = Date.now();
+                //     let currentDate = null;
+                //     do {
+                //       currentDate = Date.now();
+                //     } while (currentDate - date < milliseconds);
+                //   }
+                  
+                //   console.log("Hello wait few seconds");
+                //   sleep(4000);
                 if(!document.getElementById("notnow")){
                 if(document.getElementsByClassName("be6sR")[0]){
                     var x = document.getElementsByClassName("be6sR");
