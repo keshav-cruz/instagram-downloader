@@ -22,66 +22,11 @@ document.body.addEventListener('click',xyz(), true);
             
             
         }}
-        ,1000)
+        ,2000)
     }
     
     // loadNames();
     
-   
-
-                                                    // var xx="";
-                                                    // var myInt = setInterval(reloadon,3000);
-                                                    // document.addEventListener('DOMContentLoaded',function reloadon(){
-                        //  code for DP
-                // var x = document.getElementsByClassName("_6q-tv");
-                //     x[0].innerHTML = "Hello World!";
-                //     y=x[0].src
-                //     y=y+"&dl=1";
-    
-                                                            //  z= document.getElementsByClassName("QGPIr");
-                                                    //     z[0].innerHTML="<a href="+y+" >click me</a>";
-                                                    // let li = document.createElement('span');
-                                                    // li.setAttribute('class','keshav');
-                                                    // li.textContent="<a href="+y+">Download DP</a>"
-                                                    // z.insertBefore(li, z.firstElementChild.nextSibling);
-                                                    // const pa = document.createElement("button");
-                                                    // const no = document.createTextNode("Download DP");
-                                                    // pa.appendChild(no)
-
-                                                    // if(m!==xx){
-                                                        // clearInterval(myInt);
-
-                    // var para = document.createElement("a");
-                    // para.setAttribute('href',y);
-
-                    // var node = document.createTextNode("Download DP");
-                    // para.appendChild(node);
-                    // var element = document.getElementsByClassName("QGPIr")[0];
-                    // element.appendChild(para);
-
-                    //  code for DP
-                                                                // var xx=y; 
-                                                                // }
-                                                                
-                                                                // }, false);
-
-
-                                                        // single picture when page is reloaded
-
-                                        // var x = document.getElementsByClassName("FFVAD");
-                                        //     y=x[0].src
-                                        //     y=y+"&dl=1";
-
-
-                                        // var para = document.createElement("a");
-                                        //     para.setAttribute('href',y);
-
-                                        //     var node = document.createTextNode("Download Photo");
-                                        //     para.appendChild(node);
-                                        //     var element = document.getElementsByClassName("qvG_g")[0];
-                                        //     element.appendChild(para);
-
-                                                      //  END hereeeeeeeeeeeeeeeeee
 
     var ans=[];
     var names;
@@ -89,29 +34,11 @@ document.body.addEventListener('click',xyz(), true);
     async function loadNames() {  
        
     
-    // var a = document.getElementsByClassName("zV_Nj")[0];
-    //     if(a){
-    //     a = a.getAttribute("href");
-    //     a = a.replace('liked_by/','');
-    //     a="https://www.instagram.com"+a+"?__a=1";
-    // console.log(mmm.search("/p/"));
-    //     console.log(a);
+   
     if(mmm.search("/p/")!=-1){
         
         var a=mmm+"?__a=1";
         console.log(a+"andar aa gyi");
-        
-
-
-        // var xx =document.getElementsByClassName("  _6CZji   ")[0];
-        // var att = document.createAttribute("onclick");
-        //     att.value = "run()";
-        //     xx.setAttributeNode(att);
-           
-
-
-
-
         
             const response = await fetch(a);
             const names = await response.json();
@@ -134,16 +61,6 @@ document.body.addEventListener('click',xyz(), true);
                 var check=document.getElementById("nikhil");
                 var check1=document.getElementsByClassName("_9AhH0")[0];
                 if(!check){
-                    // var para = document.createElement("a");
-                    //                 para.setAttribute('href',""+ans[j]+"&dl=1");
-                    //                 para.setAttribute('id',"nikhil");
-                    
-                    //                 var node = document.createTextNode("Download Photo");
-                    //                 para.appendChild(node);
-                    //                 var element = document.getElementsByClassName("qvG_g")[0]; 
-                       
-                    //     element.appendChild(para);
-
 
                 var para = document.createElement("button");
                         para.setAttribute('onclick','window.location.href="'+ans[0]+'&dl=1";');
@@ -193,28 +110,7 @@ document.body.addEventListener('click',xyz(), true);
                     document.getElementsByClassName("   coreSpriteLeftChevron   ")[0].addEventListener("click", function oo(){j--; apnd(); console.log("i m back"+j);});}
                 
 
-                                        // function morepics(){
-                                                
-            
-                                        // j++;
-                                        
-                                    //   console.log("i am in forward"+j);
-                                // var para = document.createElement("a");
-                                //     para.setAttribute('href',""+ans[j]+"&dl=1");
-                                //     para.setAttribute('id',"nikhil");
-                    
-                                //     var node = document.createTextNode("Download Photo");
-                                //     para.appendChild(node);
-                                
-        // console.log("hey i am j="+j);
-                                // var para = document.createElement("button");
-                                // para.setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
-                                // para.setAttribute('id',"nikhil");
-
-                                // var node = document.createTextNode("Download Photo");
-                                // para.appendChild(node);
-                                // var element = document.getElementsByClassName("qvG_g")[0]; 
-                                // var element = document.getElementById("okok"+j).getElementsByClassName("_9AhH0")[0];
+                                    
                                 function apnd(){
                                 
                                 document.getElementById("nikhil").setAttribute('onclick','window.location.href="'+ans[j]+'&dl=1";');
@@ -247,14 +143,6 @@ document.body.addEventListener('click',xyz(), true);
                                 }
 
                             }
-                                // console.log("hey i am j="+j);
-                              
-                                
-                                    // };
-                                    
-                                    
-                                    
-                                    // element.appendChild(para);
                                 }
 
                                     
@@ -264,7 +152,7 @@ document.body.addEventListener('click',xyz(), true);
                         
             
             else if(document.getElementsByClassName("PyenC")[0]  || document.getElementsByClassName("GRtmf wymO0  ")[0]){
-                // console.log("ok");
+              
                 console.log("im in video")
                 var fin=names["items"]["0"]["video_versions"]["0"]["url"];
                 console.log(fin);
@@ -272,18 +160,13 @@ document.body.addEventListener('click',xyz(), true);
                    var para = document.createElement("button");
                         para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
                         para.setAttribute('class','button-54');
-                        // svv=document.createElement("i");
-                        // svv.setAttribute('class','');
                         para.innerHTML='<i class="gg-software-download"></i>';
-        
-                        // var node = document.createTextNode(svv);
-                        // para.appendChild(node);
                         var element = document.getElementsByClassName("qvG_g")[0];
                         element.appendChild(para);
 
-            }   //
+            }   
             else if(document.getElementsByClassName("eLAPa kPFhm")[0] || document.getElementsByClassName("eLAPa vF75o")[0] ){
-                // console.log("ok");
+               
                 var fin=names["items"]["0"]["image_versions2"]["candidates"]["0"]["url"];
                 console.log(fin);
 
@@ -291,9 +174,6 @@ document.body.addEventListener('click',xyz(), true);
                         para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
                         para.setAttribute('class','button-54');
                         para.innerHTML='<i class="gg-software-download"></i>';
-
-                        // var node = document.createTextNode("Download Photo");
-                        // para.appendChild(node);
                         var element = document.getElementsByClassName("qvG_g")[0];
                         element.appendChild(para);
                                         
@@ -303,18 +183,6 @@ document.body.addEventListener('click',xyz(), true);
 
             }
             else if(document.getElementsByClassName("QGPIr")[0] || document.getElementsByClassName("be6sR")[0]){
-
-
-                // function sleep(milliseconds) {
-                //     const date = Date.now();
-                //     let currentDate = null;
-                //     do {
-                //       currentDate = Date.now();
-                //     } while (currentDate - date < milliseconds);
-                //   }
-                  
-                //   console.log("Hello wait few seconds");
-                //   sleep(4000);
                 if(!document.getElementById("notnow")){
                 if(document.getElementsByClassName("be6sR")[0]){
                     var x = document.getElementsByClassName("be6sR");
@@ -326,143 +194,64 @@ document.body.addEventListener('click',xyz(), true);
                     x[0].innerHTML = "Hello World!";
                     y=x[0].src
                 }
-                    // y=y+"&dl=1";
                 var para = document.createElement("button");
                 para.setAttribute('onclick','window.location.href="'+y+'&dl=1";');
                 para.setAttribute('class','button-54');
                 para.setAttribute('id','notnow');
                 para.innerHTML='<i class="gg-software-download"></i>';
-
-                // var node = document.createTextNode("Download DP");
-                // para.appendChild(node);
                 var element = document.getElementsByClassName("QGPIr")[0];
                 element.appendChild(para);
             }
 
             }
             else if(mmm.search("stories")!=-1){
-                if(document.getElementsByTagName("source")[0]){
-                                            if(!document.getElementById('stal')){
-                                        var xm = document.getElementsByTagName("source")[0].getAttribute("src");
-                                                // document.getElementsByClassName("")[0];
+                 console.log("i am in stories");
 
-                                                var para = document.createElement("a");
-                                        // para.setAttribute('onclick','window.location.href="'+xm+'&dl=1";');
+                if(document.getElementsByTagName("source")[0]){
+                                            console.log("i am in video creation");
+                                            if(!document.getElementById('stal')){
+                                    var xm = document.getElementsByTagName("source")[0].getAttribute("src");
+                                    var para = document.createElement("a");
                                         para.setAttribute('href',xm+'&dl=1');
-                                        // para.setAttribute('class','button-54');
                                         para.setAttribute('target','_blank');
                                         para.setAttribute('id','stal');
                                         para.innerHTML='<button class="button-54"><i class="gg-software-download"></i></button>';
 
-                                        // var node = document.createTextNode("Download DP");
-                                        // para.appendChild(node);
+                                       
                                         var element = document.getElementsByClassName("_8p8kF")[0];
                                         element.appendChild(para);
                                             }
                                         else{
+                                            console.log("i am in already video creation");
                                             var xm = document.getElementsByTagName("source")[0].getAttribute("src");
                                             document.getElementById('stal').setAttribute('href',xm+'&dl=1');
                                         }
             }
-            else if(document.getElementsByClassName('y-yJ5 i1HvM ')[0]){
+            else 
+            {
+                console.log("i am in image");
                 if(!document.getElementById('stal')){
-                    var xm = document.getElementsByClassName('y-yJ5 i1HvM ')[0].getAttribute('src');
+                    console.log("i am in image creation");
+                    console.log(document.getElementsByClassName("y-yJ5 i1HvM ")[0]);
+                    var xm = document.getElementsByClassName("y-yJ5 i1HvM ")[0].getAttribute("src");
                     var para = document.createElement("a");
                         para.setAttribute('href',xm+'&dl=1');
-                        // para.setAttribute('class','button-54');
-                        // para.setAttribute('target','_blank');
                         para.setAttribute('id','stal');
                         para.innerHTML='<button class="button-54"><i class="gg-software-download"></i></button>';
-
-                        // var node = document.createTextNode("Download DP");
-                        // para.appendChild(node);
                         var element = document.getElementsByClassName("_8p8kF")[0];
                         element.appendChild(para);
                             }
                         else{
-                            var xm = document.getElementsByTagName("source")[0].getAttribute("src");
+                            console.log("i am already there image")
+                            var xm = document.getElementsByClassName('y-yJ5 i1HvM ')[0].getAttribute('src');
                             document.getElementById('stal').setAttribute('href',xm+'&dl=1');
                         }
                     }
 
             }
-            
-        
-
            
-            // else if(names["graphql"]["shortcode_media"]["__typename"]=="GraphImage"){
-            //                             var x = document.getElementsByClassName("FFVAD");
-            //                                 y=x[0].src
-            //                                 y=y+"&dl=1";
-
-
-            //                             var para = document.createElement("a");
-            //                                 para.setAttribute('href',y);
-
-            //                                 var node = document.createTextNode("Download Photo");
-            //                                 para.appendChild(node);
-            //                                 var element = document.getElementsByClassName("qvG_g")[0];
-            //                                 element.appendChild(para);
-
             }
-            // else if(names["graphql"]["shortcode_media"]["__typename"]=="GraphVideo"){
-
-            //        var fin=names["graphql"]["shortcode_media"]["video_url"];
-
-            //        var para = document.createElement("a");
-            //             para.setAttribute('href',""+fin+"&dl=1");
-        
-            //             var node = document.createTextNode("Download Video");
-            //             para.appendChild(node);
-            //             var element = document.getElementsByClassName("qvG_g")[0];
-            //             element.appendChild(para);
-                   
-            // }
-            // else if(document.getElementsByClassName("QGPIr")[0]){
-            //     var x = document.getElementsByClassName("_6q-tv");
-            //         x[0].innerHTML = "Hello World!";
-            //         y=x[0].src
-            //         y=y+"&dl=1";
-            //     var para = document.createElement("a");
-            //     para.setAttribute('href',y);
-
-            //     var node = document.createTextNode("Download DP");
-            //     para.appendChild(node);
-            //     var element = document.getElementsByClassName("QGPIr")[0];
-            //     element.appendChild(para);
-
-
-            // }
-
-          
-        // }
-          
-        //   loadNames();
-          
-
-          
-
-        //   setTimeout(function(){ var xx=document.getElementsByClassName(  _6CZji   ).setAttribute('onclick',loadNames); }, 5000);
-
-        // var j=0;
-        // if(document.getElementsByClassName("    coreSpriteRightChevron  ")[0]){
-        // document.getElementsByClassName("    coreSpriteRightChevron  ")[0].addEventListener("click", morepics);
-        //                         function morepics(){
-    
-        //                         j++;
-        //                 // var para = document.createElement("a");
-        //                 //     para.setAttribute('href',""+ans[j]+"&dl=1");
-        //                 //     para.setAttribute('id',"nikhil");
-            
-        //                 //     var node = document.createTextNode("Download Photo");
-        //                 //     para.appendChild(node);
-        //                     // var ele = 
-        //                     document.getElementById("nikhil").setAttribute('href',""+ans[j]+"&dl=1");
-        //                     console.log("hey i am j="+j);
-        //                     //         ele.
-        //                     // element.appendChild(para);  
-        //                     };
-        //                 }
+         
                     
 
     
