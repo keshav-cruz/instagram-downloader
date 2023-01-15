@@ -16,6 +16,7 @@
       "default_title": "Instagram Downloader",
       "default_popup": "index.html"
     },
+    "web_accessible_resources": ["/msg.mp3"],
     "manifest_version": 2,
     "background": {
       "service_worker": "background.js"

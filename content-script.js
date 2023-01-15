@@ -175,8 +175,54 @@ if (typeof module !== 'undefined') {
 
 
 
+var xxyy = document.createElement("AUDIO");
+var mpp=chrome.runtime.getURL("msg.mp3");
+xxyy.setAttribute("src",mpp);
+xxyy.setAttribute("id","myaud")
+document.body.appendChild(xxyy);
+
+
+//script for changing the title according to message recived and playing audio on msg recieve
+let mssg=0;
+setInterval(function () {
+  if(document.getElementsByClassName("xwmz7sl xo1l8bm x1ncwhqj xyqdw3p x1mpkggp xg8j3zb x1t2a60a")[0]){
+    var mes=document.getElementsByClassName("xwmz7sl xo1l8bm x1ncwhqj xyqdw3p x1mpkggp xg8j3zb x1t2a60a")[0].innerText;
+    if(mes> mssg){
+      mssg=parseInt(document.getElementsByClassName("xwmz7sl xo1l8bm x1ncwhqj xyqdw3p x1mpkggp xg8j3zb x1t2a60a")[0]);
+      console.log("tone baji thhi bhai");
+      document.getElementById("myaud").play();
+    }
+    else{
+      mssg=mes;
+    }
+    document.getElementsByTagName("title")[0].innerHTML="Insta ("+mes+")";
+  }
+  else{
+    document.getElementsByTagName("title")[0].innerHTML="Instagram";
+  }
+     
+  }, 3000);
+
+  // script for downloading images on the main page of insta
+  setInterval(function () {
+    const nam=document.getElementsByClassName("_aagv");
+    const se=document.getElementsByClassName("_aagw");
+    var i;
+    for(i=0;i<nam.length;i++){
+      if(!se[i].getElementsByClassName("alld")[0]){
+      var temm=nam[i].getElementsByTagName('img')[0].src+"&dl=1";
+      se[i].innerHTML="<a class='alld' href='"+temm+"' target='_blank'><button>Download</button></a>";
+      }
+    }
+
+  }, 1000);
 
 var mmm="";
+
+
+
+
+
 document.body.addEventListener('load', function mmmm(){xyz();}, true);
 
 
@@ -209,10 +255,10 @@ document.body.addEventListener('click',xyz(), true);
     async function loadNames() {  
        
     
-   
+   console.log("ohhh bhai");
     if(mmm.search("/p/")!=-1){
         
-        var a=mmm+"?__a=1";
+        var a=mmm+"?__a=1&__d=dis";
         console.log(a+"andar aa gyi");
         
             const response = await fetch(a);
@@ -234,18 +280,18 @@ document.body.addEventListener('click',xyz(), true);
                 };  
 
                 var check=document.getElementById("nikhil");
-                var check1=document.getElementsByClassName("_9AhH0")[0];
+                // var check1=document.getElementsByClassName("_9AhH0")[0];
                 if(!check){
 
                 var para = document.createElement("button");
                         para.setAttribute('onclick','window.location.href="'+ans[0]+'&dl=1";');
                         para.setAttribute('id',"nikhil");
-                        para.setAttribute('class','button-54');
+                        para.setAttribute('class','x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz xjyslct x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye xwhw2v2 x17ydfre x1f6kntn x123j3cw xs9asl8 x2b8uid xlyipyv x87ps6o x14atkfc x1n2onr6 x1d5wrs8 x6s0dn4 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x10w6t97 xl56j7k x1swvt13 x1pi30zi x1gjpkn9 x175jnsf xsz8vos');
                         para.innerHTML='<i class="gg-software-download"></i>';
         
                         // var node = document.createTextNode("Download Photo");              
                         // para.appendChild(node);
-                        var element = document.getElementsByClassName("qvG_g")[0]; 
+                        var element = document.getElementsByClassName("_aamu _ae3_ _ae47 _ae48")[0]; 
                        
                         element.appendChild(para);
 
@@ -255,11 +301,11 @@ document.body.addEventListener('click',xyz(), true);
                                       var para = document.createElement("button");
                                             para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
                                             para.setAttribute('id',"keshav");
-                                            para.setAttribute('class','button-54');
+                                            para.setAttribute('class','x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz xjyslct x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye xwhw2v2 x17ydfre x1f6kntn x123j3cw xs9asl8 x2b8uid xlyipyv x87ps6o x14atkfc x1n2onr6 x1d5wrs8 x6s0dn4 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x10w6t97 xl56j7k x1swvt13 x1pi30zi x1gjpkn9 x175jnsf xsz8vos');
                                             para.innerHTML='<i class="gg-software-download"></i>';
                                     //    var node = document.createTextNode("Download Video");
                                     //       para.appendChild(node);
-                                      var element = document.getElementsByClassName("qvG_g")[0];
+                                      var element = document.getElementsByClassName("_aamu _ae3_ _ae47 _ae48")[0];
                                           element.appendChild(para);
                         }
 
@@ -268,8 +314,8 @@ document.body.addEventListener('click',xyz(), true);
 
                 var j=0;
                 var yy=0;
-                if(document.getElementsByClassName("    coreSpriteRightChevron  ")[0]){
-                document.getElementsByClassName("    coreSpriteRightChevron  ")[0].addEventListener("click", fwd);
+                if(document.getElementsByClassName(" _aahi")[0]){
+                document.getElementsByClassName(" _aahi")[0].addEventListener("click", fwd);
 
                 function fwd(){
                     j++; 
@@ -282,7 +328,7 @@ document.body.addEventListener('click',xyz(), true);
                 }
                 function okji(){
                     
-                    document.getElementsByClassName("   coreSpriteLeftChevron   ")[0].addEventListener("click", function oo(){j--; apnd(); console.log("i m back"+j);});}
+                    document.getElementsByClassName(" _aahh")[0].addEventListener("click", function oo(){j--; apnd(); console.log("i m back"+j);});}
                 
 
                                     
@@ -300,11 +346,11 @@ document.body.addEventListener('click',xyz(), true);
                                      var para = document.createElement("button");
                                            para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
                                            para.setAttribute('id',"keshav");
-                                           para.setAttribute('class','button-54');
+                                           para.setAttribute('class','x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz xjyslct x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye xwhw2v2 x17ydfre x1f6kntn x123j3cw xs9asl8 x2b8uid xlyipyv x87ps6o x14atkfc x1n2onr6 x1d5wrs8 x6s0dn4 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x10w6t97 xl56j7k x1swvt13 x1pi30zi x1gjpkn9 x175jnsf xsz8vos');
                                            para.innerHTML='<i class="gg-software-download"></i>';
                                     //   var node = document.createTextNode("Download Video");
                                     //      para.appendChild(node);
-                                     var element = document.getElementsByClassName("qvG_g")[0];
+                                     var element = document.getElementsByClassName("_aamu _ae3_ _ae47 _ae48")[0];
                                          element.appendChild(para);
                                     }
 
@@ -326,7 +372,7 @@ document.body.addEventListener('click',xyz(), true);
                     
                         
             
-            else if(document.getElementsByClassName("PyenC")[0]  || document.getElementsByClassName("GRtmf wymO0  ")[0]){
+            else if(names["items"]["0"]["media_type"]==2){
               
                 console.log("im in video")
                 var fin=names["items"]["0"]["video_versions"]["0"]["url"];
@@ -334,60 +380,27 @@ document.body.addEventListener('click',xyz(), true);
 
                    var para = document.createElement("button");
                         para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
-                        para.setAttribute('class','button-54');
+                        para.setAttribute('class','x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz xjyslct x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye xwhw2v2 x17ydfre x1f6kntn x123j3cw xs9asl8 x2b8uid xlyipyv x87ps6o x14atkfc x1n2onr6 x1d5wrs8 x6s0dn4 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x10w6t97 xl56j7k x1swvt13 x1pi30zi x1gjpkn9 x175jnsf xsz8vos');
                         para.innerHTML='<i class="gg-software-download"></i>';
-                        var element = document.getElementsByClassName("qvG_g")[0];
+                        var element = document.getElementsByClassName("_aamu _ae3_ _ae47 _ae48")[0];
                         element.appendChild(para);
 
             }   
-            else if(document.getElementsByClassName("eLAPa kPFhm")[0] || document.getElementsByClassName("eLAPa vF75o")[0] ){
+            else if(names["items"]["0"]["media_type"]==1){
                
                 var fin=names["items"]["0"]["image_versions2"]["candidates"]["0"]["url"];
                 console.log(fin);
 
                    var para = document.createElement("button");
                         para.setAttribute('onclick','window.location.href="'+fin+'&dl=1";');
-                        para.setAttribute('class','button-54');
+                        para.setAttribute('class','x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz xjyslct x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye xwhw2v2 x17ydfre x1f6kntn x123j3cw xs9asl8 x2b8uid xlyipyv x87ps6o x14atkfc x1n2onr6 x1d5wrs8 x6s0dn4 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x10w6t97 xl56j7k x1swvt13 x1pi30zi x1gjpkn9 x175jnsf xsz8vos');
                         para.innerHTML='<i class="gg-software-download"></i>';
-                        var element = document.getElementsByClassName("qvG_g")[0];
+                        var element = document.getElementsByClassName("_aamu _ae3_ _ae47 _ae48")[0];
                         element.appendChild(para);
                                         
 
             }
                     
-
-            }
-            else if(document.getElementsByClassName("QGPIr")[0] || document.getElementsByClassName("be6sR")[0]){
-                if(!document.getElementById("notnow")){
-                if(document.getElementsByClassName("be6sR")[0]){
-                    var x = document.getElementsByClassName("be6sR");
-                    x[0].innerHTML = "Hello World!";
-                    y=x[0].src
-                }
-                else{
-                var x = document.getElementsByClassName("_6q-tv");
-                    x[0].innerHTML = "Hello World!";
-                    y=x[0].src
-                }
-                var para = document.createElement("button");
-                para.setAttribute('onclick','window.location.href="'+y+'&dl=1";');
-                para.setAttribute('class','button-54');
-                para.setAttribute('id','notnow');
-                para.innerHTML='<i class="gg-software-download"></i>';
-                var element = document.getElementsByClassName("QGPIr")[0];
-                var username=document.getElementsByClassName("_7UhW9       fKFbl yUEEX    KV-D4               fDxYl     ")[0].innerHTML;
-                var bulk = document.createElement("button");
-                // bulk = setAttribute('onclick',loaddata()); 
-                bulk.onclick = function() { loaddata(username) };
-                bulk.className ="button-54";
-                bulk.id="bulkdown";
-                // bulk = setAttribute('class','button-54');
-                // bulk = setAttribute('id','notnow');
-                bulk.innerHTML='Bulk-Data';
-
-                element.appendChild(para);
-                element.appendChild(bulk);
-            }
 
             }
             else if(mmm.search("stories")!=-1){
@@ -401,10 +414,10 @@ document.body.addEventListener('click',xyz(), true);
                                         para.setAttribute('href',xm+'&dl=1');
                                         para.setAttribute('target','_blank');
                                         para.setAttribute('id','stal');
-                                        para.innerHTML='<button class="button-54"><i class="gg-software-download"></i></button>';
+                                        para.innerHTML='<button class="x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz xjyslct x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye xwhw2v2 x17ydfre x1f6kntn x123j3cw xs9asl8 x2b8uid xlyipyv x87ps6o x14atkfc x1n2onr6 x1d5wrs8 x6s0dn4 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x10w6t97 xl56j7k x1swvt13 x1pi30zi x1gjpkn9 x175jnsf xsz8vos"><i class="gg-software-download"></i></button>';
 
                                        
-                                        var element = document.getElementsByClassName("_8p8kF")[0];
+                                        var element = document.getElementsByClassName("_ac0m")[0];
                                         element.appendChild(para);
                                             }
                                         else{
@@ -418,23 +431,59 @@ document.body.addEventListener('click',xyz(), true);
                 console.log("i am in image");
                 if(!document.getElementById('stal')){
                     console.log("i am in image creation");
-                    console.log(document.getElementsByClassName("y-yJ5 i1HvM ")[0]);
-                    var xm = document.getElementsByClassName("y-yJ5 i1HvM ")[0].getAttribute("src");
+                    console.log(document.getElementsByClassName("_aa63 _ac51")[0]);
+                    var xm = document.getElementsByClassName("_aa63 _ac51")[0].getAttribute("src");
                     var para = document.createElement("a");
                         para.setAttribute('href',xm+'&dl=1');
                         para.setAttribute('id','stal');
-                        para.innerHTML='<button class="button-54"><i class="gg-software-download"></i></button>';
-                        var element = document.getElementsByClassName("_8p8kF")[0];
+                        para.innerHTML='<button class="x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz xjyslct x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye xwhw2v2 x17ydfre x1f6kntn x123j3cw xs9asl8 x2b8uid xlyipyv x87ps6o x14atkfc x1n2onr6 x1d5wrs8 x6s0dn4 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x10w6t97 xl56j7k x1swvt13 x1pi30zi x1gjpkn9 x175jnsf xsz8vos"><i class="gg-software-download"></i></button>';
+                        var element = document.getElementsByClassName("_ac0m")[0];
                         element.appendChild(para);
                             }
                         else{
                             console.log("i am already there image")
-                            var xm = document.getElementsByClassName('y-yJ5 i1HvM ')[0].getAttribute('src');
+                            var xm = document.getElementsByClassName('_aa63 _ac51')[0].getAttribute('src');
                             document.getElementById('stal').setAttribute('href',xm+'&dl=1');
                         }
                     }
 
             }
+            else if(mmm.search(".com/")!=-1[0]){
+              // if(!document.getElementById("notnow")){
+                console.log("hey aa gya ohtoo m bhai");
+              if(!document.getElementById("notnow")){
+                const response = await fetch(window.location.href+"?__a=1&__d=dis");
+                const names = await response.json();
+                console.log(names);
+                var y=names["graphql"]["user"]["profile_pic_url_hd"];
+                console.log("hey imageeeeeeeeee");
+              var para = document.createElement("button");
+              para.setAttribute('onclick','window.location.href="'+y+'&dl=1";');
+              para.setAttribute('class','x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz xjyslct x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye xwhw2v2 x17ydfre x1f6kntn x123j3cw xs9asl8 x2b8uid xlyipyv x87ps6o x14atkfc x1n2onr6 x1d5wrs8 x6s0dn4 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x10w6t97 xl56j7k x1swvt13 x1pi30zi x1gjpkn9 x175jnsf xsz8vos');
+              para.setAttribute('id','notnow');
+              para.innerHTML='<i class="gg-software-download"></i>';
+              var element = document.getElementsByClassName("_ab8w  _ab94 _ab99 _ab9f _ab9k _ab9p _abcm")[0];
+              var username=document.getElementsByClassName("x1lliihq x1plvlek xryxfnj x1n2onr6 x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye x1ms8i2q xo1l8bm x5n08af x4zkp8e xw06pyt x10wh9bi x1wdrske x8viiok x18hxmgj")[0].innerHTML;
+              var bulk = document.createElement("button");
+              // bulk = setAttribute('onclick',loaddata()); 
+              bulk.onclick = function() { loaddata(username) };
+              console.log("hey babes babes");
+              bulk.className ="x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz xjyslct x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye xwhw2v2 x17ydfre x1f6kntn x123j3cw xs9asl8 x2b8uid xlyipyv x87ps6o x14atkfc x1n2onr6 x1d5wrs8 x6s0dn4 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x10w6t97 xl56j7k x1swvt13 x1pi30zi x1gjpkn9 x175jnsf xsz8vos";
+              bulk.id="bulkdown";
+              // bulk = setAttribute('class','x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz xjyslct x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye xwhw2v2 x17ydfre x1f6kntn x123j3cw xs9asl8 x2b8uid xlyipyv x87ps6o x14atkfc x1n2onr6 x1d5wrs8 x6s0dn4 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x10w6t97 xl56j7k x1swvt13 x1pi30zi x1gjpkn9 x175jnsf xsz8vos');
+              // bulk = setAttribute('id','notnow');
+              bulk.innerHTML='Bulk-Data';
+
+              element.appendChild(para);
+              element.appendChild(bulk);
+              }
+              
+              
+              
+              
+          // }
+
+          }
            
             }
          
@@ -481,20 +530,36 @@ document.body.addEventListener('click',xyz(), true);
 }}
 
 async function loaddata(username){
+  console.log(username);
     document.getElementById("bulkdown").innerHTML="please wait..";
     document.getElementById("bulkdown").onclick = function() {console.log("have patience")};
     let zipp = new JSZip();
     let folder = zipp.folder('collection');
   var amm;
-    const abc = await fetch("https://www.instagram.com/"+username+"?__a=1");
+    const abc = await fetch("https://www.instagram.com/"+username+"?__a=1&__d=dis");
    amm = await abc.json();
 var an=[];
+if(amm.graphql.user.followed_by_viewer==false && amm.graphql.user.is_private==true){
+  document.getElementById("bulkdown").innerHTML="Profile private";
+  document.getElementById("bulkdown").onclick = function() {console.log("have patience")};
+  return 0;
+}
 var count = amm.graphql.user.edge_owner_to_timeline_media.count
 if(count<12){
 var i = 0;
     for (i; i < count; i++) {
-        an[i]= amm.graphql.user.edge_owner_to_timeline_media.edges[i].node.display_url;
-        document.getElementById("bulkdown").innerHTML="wait.. "+i+"th file adding";
+        // an[i]= amm.graphql.user.edge_owner_to_timeline_media.edges[i].node.display_url;
+        // document.getElementById("bulkdown").innerHTML="wait.. "+i+"th file adding";
+        const response = await fetch(amm.graphql.user.edge_owner_to_timeline_media.edges[i].node.display_url);
+        const arr = await response.blob();
+        var reader = new FileReader() ;
+
+        reader.readAsDataURL(arr);
+        reader.onload = function(){ window.ans=this.result;};
+
+        dataUrl=String(window.ans)
+        let tem=dataUrl.substr(23);
+        folder.file(i+".jpg", tem,{base64: true});
     }
   }
   else{
@@ -545,6 +610,7 @@ if (count > 12) {
                             code=amm.data.user.edge_owner_to_timeline_media.page_info.end_cursor
                     }
 }
+if(count>12){
 const response = await fetch(amm.data.user.edge_owner_to_timeline_media.edges[k-1].node.display_url);
 const arr = await response.blob();
 var reader = new FileReader() ;
@@ -558,6 +624,7 @@ let tem=dataUrl.substr(23);
 folder.file(i+".jpg", tem,{base64: true});
 console.log("Done created "+i+" files");
 document.getElementById("bulkdown").innerHTML="wait.. "+i+"th file adding";
+}
 folder.generateAsync({ type: "blob" }).then(content => saveAs(content, ""+username+".zip"));  
 
    document.getElementById("bulkdown").onclick = function() { loaddata(username) };
