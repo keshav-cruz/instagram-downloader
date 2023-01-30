@@ -182,6 +182,7 @@ xxyy.setAttribute("id", "myaud")
 document.body.appendChild(xxyy);
 
 
+
 //script for changing the title according to message recived and playing audio on msg recieve
 let mssg = 0;
 setInterval(function () {
@@ -232,19 +233,16 @@ document.body.addEventListener('click', xyz(), true);
 function xyz() {
 
   setTimeout(function hmm() {
-    console.log("i am in set time out");
     if (window.location.href != mmm) {
-      // console.log("window changed");
+      console.log("window changed");
       mmm = window.location.href;
-      console.log("button clicked andr")
       //  setTimeout(loadNames, 3000); 
       loadNames();
-      console.log("iam in set 2");
 
 
     }
   }
-    , 2000)
+    , 3000)
 }
 
 // loadNames();
@@ -449,13 +447,16 @@ async function loadNames() {
     }
 
   }
-  else if (mmm.search(".com/") != -1[0]) {
-    // if(!document.getElementById("notnow")){
+  else //if (mmm.search(".com/") != -1[0]) {
+    {
+    if(!document.getElementById("notnow")){
     console.log("hey aa gya ohtoo m bhai");
-    if (!document.getElementById("notnow")) {
+    // if (!document.getElementById("notnow")) {
       const response = await fetch(window.location.href + "?__a=1&__d=dis");
       const names = await response.json();
       console.log(names);
+
+      console.log("kya scene h");
       var y = names["graphql"]["user"]["profile_pic_url_hd"];
       console.log("hey imageeeeeeeeee");
       var para = document.createElement("button");
@@ -464,7 +465,7 @@ async function loadNames() {
       para.setAttribute('id', 'notnow');
       para.innerHTML = '<i class="gg-software-download"></i>';
       var element = document.getElementsByClassName("_ab8w  _ab94 _ab99 _ab9f _ab9k _ab9p _abcm")[0];
-      var username = document.getElementsByClassName("x1lliihq x1plvlek xryxfnj x1n2onr6 x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye x1ms8i2q xo1l8bm x5n08af x4zkp8e xw06pyt x10wh9bi x1wdrske x8viiok x18hxmgj")[0].innerHTML;
+      var username = document.getElementsByClassName("x1lliihq x1plvlek xryxfnj x1n2onr6 x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye x1ms8i2q xo1l8bm x5n08af x10wh9bi x1wdrske x8viiok x18hxmgj")[0].innerHTML;
       var bulk = document.createElement("button");
       // bulk = setAttribute('onclick',loaddata()); 
       bulk.onclick = function () { loaddata(username) };
@@ -669,6 +670,16 @@ else{
 }
 
 }
+
+// function xxx(history){
+//   var pushState = history.pushState;
+//   history.pushState = function(state) {
+//     console.log('I am called from pushStateHook');
+//     return pushState.apply(history, arguments);
+//   };
+// }
+// //(window.history);
+// xxx(window.history);
 
 
 
